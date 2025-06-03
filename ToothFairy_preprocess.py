@@ -31,7 +31,7 @@ def move_matched_pairs(images_dir, labels_dir, output_images_dir, output_labels_
 
     for prefix in prefixes:
         matched = []
-        for fname in sorted(image_groups[prefix]):
+        for fname in sorted(image_groups[prefix], reverse=True):
             base_id = strip_image_id(fname)
             label_fname = base_id + ".nii.gz"
             if base_id in label_set:
